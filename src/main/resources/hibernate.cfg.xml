@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	    <!-- url -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernatemorning</property>
+
+		<!-- username -->
+		<property name="hibernate.connection.username">root</property>
+
+		<!-- password -->
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- mysql driver -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<!-- Sql -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Create/ update -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+
+		<!-- Mapping -->
+		<mapping class="com.practice2.hibernate.Bike" />
+		<mapping class="com.practice2.hibernate.Garage" />
+		<mapping class="com.map.OneToOne.hibernate.Question" />
+		<mapping class="com.map.OneToOne.hibernate.Answer" />
+		<mapping class="com.map.OneToMany.hibernate.Person" />
+		<mapping class="com.map.OneToMany.hibernate.Bank" />
+		<mapping class="com.map.ManyToMany.hibernate.Employee" />
+		<mapping class="com.map.ManyToMany.hibernate.Project" />
+		<mapping class="com.HQL.hibernate.Student" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
+	
